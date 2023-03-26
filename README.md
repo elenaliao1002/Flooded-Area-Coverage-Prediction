@@ -2,6 +2,16 @@
 
 Members: Elena Liao, Xinyi (Jessica) Wang
 
+## Data Engineering Pipeline
+
+Here is the automated pipeline using Airflow for extraction data from Google Earth Engine API and Google Drive, uploading them to Google Cloud (GCS) and transferring to MongoDB, and finally using Databricks to implement machine learning:
+
+1. Use the Google Earth Engine Python API to retrieve image data from Sentinel 2 satellites.
+2. Use Airflow to download the survey data from Google Drive.
+3. Save the image and survey data to GCS.
+4. Use Airflow to insert the data from GCS to MongoDB.
+5. Use Databricks to read the data from MongoDB and implement machine learning algorithms(K-means) to predict flood coverage.
+
 ## Problem/Motivation Statement
 
 The Nature Conservancy (TNC) and partners have created [BirdReturns](https://birdreturns.org/) to pay farmers to flood their fields to better support migratory wetland birds. As continue to scale, technology is needed to cost-effectively monitor enrolled fields to ensure they are flooded. Our ML objective is to use machine learning algorithms to predict flood coverage. We plan to investigate the following and more approaches for water coverage estimation.
@@ -15,15 +25,6 @@ Dataset:
    Analytic goals:
    Our goal is to use machine learning algorithms to predict flood coverage.
 
-## Data Engineering Pipeline
-
-Here is the automated pipeline using Airflow for extraction data from Google Earth Engine API and Google Drive, uploading them to Google Cloud (GCS) and transferring to MongoDB, and finally using Databricks to implement machine learning:
-
-1. Use the Google Earth Engine Python API to retrieve image data from Sentinel 2 satellites.
-2. Use Airflow to download the survey data from Google Drive.
-3. Save the image and survey data to GCS.
-4. Use Airflow to insert the data from GCS to MongoDB.
-5. Use Databricks to read the data from MongoDB and implement machine learning algorithms(K-means) to predict flood coverage.
 
 ## Data Preprocessing
 
